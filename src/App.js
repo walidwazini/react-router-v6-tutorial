@@ -16,7 +16,7 @@ function App() {
           <Route path='/welcome' element={<Welcome />} >
             {/* <Welcome /> */}
           </Route>
-          <Route path='/products' element={<Products />} exact>
+          <Route path='/products' element={<Products />} >
             {/* <Products /> */}
           </Route>
           <Route path='/products/:productId' element={<ProductDetail />} >
