@@ -1,5 +1,6 @@
 import { Route, Switch, 
   Routes,
+  Navigate,
 } from 'react-router-dom';
 
 import Welcome from './pages/Welcome';
@@ -13,8 +14,11 @@ function App() {
       <MainHeader />
       <main>
         <Routes>
-          <Route path='/welcome' element={<Welcome />} >
+          <Route path='/' element={<Navigate to='/welcome' />} />
+            {/* <Navigate to='/welcome' />  */}
+          <Route path='/welcome/*' element={<Welcome />} >
             {/* <Welcome /> */}
+            <Route path='new-user' element={<p>Welsome new user</p>} />
           </Route>
           <Route path='/products' element={<Products />} >
             {/* <Products /> */}
